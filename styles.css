@@ -1,0 +1,24 @@
+body {
+  background: #030301;
+ 
+}
+.columns_container{
+  display: grid;
+  grid-template-columns: 20% 50% 30% ;
+}
+.column_item{
+  background-color: #FF4365;
+  border: 1px solid #B7AD99;
+  text-align: center;
+  height: 40px;
+}
+.colums-rows_container {
+  display: grid;
+  grid-template: 300px 100px 100px  400px/  50% 200px 100px ;
+}
+.colum_row_item {
+  color: white;
+  font-size: 20px;
+  background-color: #054A91;
+  border: 1px solid #F17300;
+}

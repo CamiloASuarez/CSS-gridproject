@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones</title>
+</head>
+<style>
+  body {
+    background: #757575;
+    color: white;
+    font-size: 20px;
+  }
+  .container {
+    border: 1px solid springgreen;
+    display: grid;
+
+    /*Differents ways to put size in columns and rows */
+    /*grid-template: 300px 100px 100px /  300px 150px 100px */
+    /*grid-template: 300px 100px 100px /  1fr 1fr 1fr */
+    /* grid-template: 300px 100px 100px / repeat(5, 2fr);*/
+    grid-template: 300px 100px 100px /minmax(200px, 1fr) 1fr 1fr 1fr;
+    /* grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); */
+
+    grid-column-gap: 30px ; /*=====SPACE BETWEEN COLUMNS*/
+    grid-row-gap: 60px;     /*=====SPACE BETWEEN ROWS*/
+    /*grid-gap: 10px 50px ; /* FUSION BETWEEN GRID-COLUMN-GAP and GRID-ROW-GAP */
+  /*         rows columns ; */
+  }
+  .item {
+    background:#20BF55;
+    padding: 10px;
+    border: 1px solid #0B4F6C;
+  }
+  .item:nth-of-type(4) {
+    background:#01BAEF;
+    overflow: auto; /*scroll inside element 4*/
+    /*display: subgrid;*/
+     /*display: inline-grid;*/
+    display: grid;
+    grid-template:50px 50px 50px  / 150px 150px 150px;
+  }
+  .item .item {
+    background: #F4796B;
+  }
+</style>
+<body>
+  <section class="container">
+    <div class="item"> item 1 </div>
+    <div class="item"> item 2 </div>
+    <div class="item"> item 3 </div>
+    <div class="item">
+      <div class="item">subitem #1</div>
+      <div class="item">subitem #2</div>
+      <div class="item">subitem #3</div>
+      <div class="item">subitem #4</div>
+      <div class="item">subitem #5</div>
+    </div>
+    <div class="item"> item 5 </div>
+    <div class="item"> item 6 </div>
+    <div class="item"> item 7 </div>
+    <div class="item"> item 8 </div>
+    <div class="item"> item 9 </div>
+    <div class="item"> item 10 </div>
+    <div class="item"> item 11 </div>
+    <div class="item"> item 12 </div>
+  </section>
+</body>
+</html>
